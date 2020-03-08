@@ -1,2 +1,4 @@
-print("hello world")
-asdasd
+def zeroMatrix(matrix):
+    print("hello world")
+
+zeroMatrix("asd")
