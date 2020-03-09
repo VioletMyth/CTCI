@@ -36,4 +36,4 @@ def stringCompression2(string):
         return string
     else:
         return outString
-print(stringCompression2("penis55555555555555555555555555555555555555555555"))
+print(stringCompression2("Hello world"))
