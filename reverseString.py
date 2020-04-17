@@ -8,4 +8,10 @@ def reverseString(string):
     outString += string[i]
   return outString
 
-print(reverseString(1))
+def reverseString2(string): #does same for less increased readability
+  outString = list(string)
+  outString.reverse()
+  return ''.join(outString)
+  
+print(reverseString("12312312312"))
+print(reverseString2("12312312312"))
