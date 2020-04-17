@@ -28,4 +28,4 @@ def isPermutation(string1, string2):
 
     return True
 
-print(isPermutation("your mum is gayasd", "your mum is gay"))
+print(isPermutation("hello world"))
