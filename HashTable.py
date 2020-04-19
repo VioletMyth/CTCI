@@ -3,7 +3,7 @@ class HashTable:
   def __init__(self,size):
     self.data = [None] * size
 
-  def hash(self, key):  #no collision resolution, previous data is erased when there is a collision
+  def __hash(self, key):  #no collision resolution, previous data is erased when there is a collision
     hashing = 0
     for i in range(len(key)):
       hashing = (hashing + ord(key[i]) * i) % len(self.data)
@@ -11,11 +11,11 @@ class HashTable:
   
   
   def set(self, key, value):
-    slot = self.hash(key)
+    slot = self.__hash(key)
     self.data[slot] = [key, value]
     
   def get(self, key):
-    slot = self.hash(key)
+    slot = self.__hash(key)
     return self.data[slot][-1]
   
   def keys(self):
