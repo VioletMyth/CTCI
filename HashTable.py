@@ -1,3 +1,4 @@
+import random
 class HashTable:
   def __init__(self,size):
     self.data = [None] * size
@@ -8,10 +9,10 @@ class HashTable:
       hashing = (hashing + ord(key[i]) * i) % len(self.data)
     return hashing
   
+  
   def set(self, key, value):
     slot = self.hash(key)
     self.data[slot] = [key, value]
-  
   def get(self, key):
     slot = self.hash(key)
     return self.data[slot][-1]
@@ -19,6 +20,8 @@ class HashTable:
   
 myHashTable = HashTable(50)
 myHashTable.set('grapes', 10000)
+myHashTable.set('grapes', 99999)
 print(myHashTable.get('grapes'))
 myHashTable.set('apples', 9)
 print(myHashTable.get('apples'))
+print(myHashTable.data)
