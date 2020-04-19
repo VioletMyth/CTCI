@@ -13,9 +13,17 @@ class HashTable:
   def set(self, key, value):
     slot = self.hash(key)
     self.data[slot] = [key, value]
+    
   def get(self, key):
     slot = self.hash(key)
     return self.data[slot][-1]
+  
+  def keys(self):
+    keysList = []
+    for i in range(len(self.data)):
+      if self.data[i]:
+        keysList.append(self.data[i][0])
+    return keysList
 
   
 myHashTable = HashTable(50)
@@ -25,3 +33,4 @@ print(myHashTable.get('grapes'))
 myHashTable.set('apples', 9)
 print(myHashTable.get('apples'))
 print(myHashTable.data)
+print(myHashTable.keys())
