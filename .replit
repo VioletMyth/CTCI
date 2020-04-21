@@ -1,2 +1,2 @@
-language = "python3"
-run = "python Linkedlist.py"
+language = "python3.6"
+run = "python DoublyLinklist.py"
