@@ -47,19 +47,25 @@ class LinkedList:
       print(curr.value)
       curr = curr.next
   
-  def reverse(self):
-    
+  def reverse(self):  #O(n) time because we have to loop throguh the entire list.
+    previous = None
+    current = self.head
+    while current:
+      temp = current.next
+      current.next = previous
+      previous = current
+      current = temp
+    self.head = previous
+
 
 myLinkedList = LinkedList(10)
 myLinkedList.append(12)
 myLinkedList.append(13)
 myLinkedList.append(14)
 myLinkedList.printVals()
-print()
-myLinkedList.remove(3)
-print("length", myLinkedList.length)
+myLinkedList.reverse()
+print("reversed")
 myLinkedList.printVals()
-print(myLinkedList.tail.value)
 # print("___________________")
 # myLinkedList.printVals()
 # print("___________________")
